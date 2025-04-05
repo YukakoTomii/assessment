@@ -1,0 +1,21 @@
+body {
+  background-color: #00aaff;
+  color: white;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+button {
+  padding: 5px 20px;
+  background-color: #07b;
+  color: #f5efed;
+  border-style: none;
+}
+button:hover{
+  background-color: #3ae;
+  color: black;
+}
+
+input {
+  height: 25px;
+}
