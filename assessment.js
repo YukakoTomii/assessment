@@ -21,6 +21,8 @@ assessmentButton.addEventListener(
     // 診断結果表示エリアの作成
     // 最初に表示エリアを空にする
     resultDivision.innerText = '';
+
+    /*
     // h3タグを作る
     const heading = document.createElement('h3');
     // h3タグの中身ぶ文章を設定する
@@ -35,6 +37,34 @@ assessmentButton.addEventListener(
     paragraph.innerText = result;
     // divタグの子要素とする
     resultDivision.appendChild(paragraph);
+    */
+
+    // cardヘッダー用のdivタグを作る
+    // headerDivisionの作成
+    const headerDivision = document.createElement('div')
+    // 作成したタグにclass属性を付ける
+    headerDivision.setAttribute('class', 'card-header text-bg-primary');
+    // cardヘッダーの中身の文章を設定する
+    headerDivision.innerText = '診断結果';
+    // bodyDivisionの作成
+    const bodyDivision = document.createElement('div');
+    // ブートストラップ用の属性を追加する
+    bodyDivision.setAttribute('class','card-body');
+    // pタグを作る
+    const paragraph = document.createElement('p');
+    //card内のテキスト用のclass属性を追加する
+    paragraph.setAttribute('class','card-text');
+    // 診断結果の文章を作る
+    const result = assessment(userName);
+    // pタグの中身の文章を設定する
+    paragraph.innerText = result;
+    // divタグの子要素とする
+    bodyDivision.appendChild(paragraph);
+    // resultDivisionにブートストラップのスタイルを適用する
+    resultDivision.setAttribute('class','card');
+    // headerDivisionとbodyDivisionをresultDivisionの子要素とて追加する
+    resultDivision.appendChild(headerDivision)
+    resultDivision.appendChild(bodyDivision)
 
     // ツイートエリアの作成
     tweetDivision.innerText = '';
